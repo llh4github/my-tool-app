@@ -19,6 +19,12 @@ export default defineConfig({
   ],
   clearScreen: false,
   envPrefix: ['VITE_', 'TAURI_'],
+  resolve: {
+    alias: {
+      /** @ 符号指向 src 目录 */
+      "@": resolve(__dirname, "./src"),
+    },
+  },
   server: {
     port: 5173,
     strictPort: true,
